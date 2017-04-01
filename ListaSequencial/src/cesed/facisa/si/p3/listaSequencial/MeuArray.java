@@ -9,9 +9,10 @@ public class MeuArray {
 		objects = new MeuArray [size];	
 	}
 	
-	public static void addMeuArray (int size){
+	public static void addMeuArray (Object objeto){
 		
-		int pos = 0;
+		
+		
 		
 		
 	}
