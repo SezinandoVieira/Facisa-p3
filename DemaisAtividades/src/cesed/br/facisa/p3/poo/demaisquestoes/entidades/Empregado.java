@@ -4,18 +4,18 @@ package cesed.br.facisa.p3.poo.demaisquestoes.entidades;
  * 
  * @author Sezinando Vieira
  * 
- * Responsible class for creation of Vehicle object.
+ *         Responsible class for creation of Vehicle object.
  *
  */
 
 public class Empregado {
 
 	private String nome;
-	
+
 	private int matricula;
-	
+
 	private int idade;
-	
+
 	private double salario;
 
 	/**
@@ -37,7 +37,8 @@ public class Empregado {
 	}
 
 	/**
-	 * @param nome the nome to set
+	 * @param nome
+	 *            the nome to set
 	 */
 	public void setNome(String nome) {
 		this.nome = nome;
@@ -51,7 +52,8 @@ public class Empregado {
 	}
 
 	/**
-	 * @param matricula the matricula to set
+	 * @param matricula
+	 *            the matricula to set
 	 */
 	public void setMatricula(int matricula) {
 		this.matricula = matricula;
@@ -65,7 +67,8 @@ public class Empregado {
 	}
 
 	/**
-	 * @param idade the idade to set
+	 * @param idade
+	 *            the idade to set
 	 */
 	public void setIdade(int idade) {
 		this.idade = idade;
@@ -77,14 +80,26 @@ public class Empregado {
 	public double getSalario() {
 		return salario;
 	}
+	
 
 	/**
 	 * @param salario the salario to set
 	 */
 	public void setSalario(double salario) {
-		this.salario = salario;
+		if (salario > 0){
+			this.salario = salario;
+		}
 	}
-	
-	
-	
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Empregado {" + (nome != null ? "Nome = " + nome + ", " : "") + " Matricula = " + matricula
+				+ ", Idade = " + idade + ", Salario = " + salario + "}";
+	}
+
 }
