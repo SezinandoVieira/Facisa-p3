@@ -88,6 +88,8 @@ public class Empregado {
 	public void setSalario(double salario) {
 		if (salario > 0){
 			this.salario = salario;
+		}else{
+			System.out.println("Salario inválido");
 		}
 	}
 

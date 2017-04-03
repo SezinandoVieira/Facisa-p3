@@ -31,7 +31,8 @@ public class Main {
 		
 		System.out.println(emp2);
 		
-		
+		emp1.setSalario(200);
+		System.out.println(emp1.getSalario());
 		
 	}
 

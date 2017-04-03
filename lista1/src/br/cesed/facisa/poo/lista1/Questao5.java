@@ -23,6 +23,7 @@ public class Questao5 {
 		this.codigo = codigo;
 	}
 	
+	//Um construtor serve para inicializar um objeto da classe.
 	
 	
 }
