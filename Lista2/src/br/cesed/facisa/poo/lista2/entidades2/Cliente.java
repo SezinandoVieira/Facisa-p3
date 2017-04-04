@@ -1,6 +1,6 @@
 package br.cesed.facisa.poo.lista2.entidades2;
 
-public class Cliente extends Pessoa {
+public final class Cliente extends Pessoa {
 
 	private double valorDivida;
 	
