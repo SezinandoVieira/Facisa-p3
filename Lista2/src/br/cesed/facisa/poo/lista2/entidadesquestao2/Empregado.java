@@ -1,4 +1,4 @@
-package br.cesed.facisa.poo.lista2.entidades2;
+package br.cesed.facisa.poo.lista2.entidadesquestao2;
 
 public class Empregado extends Pessoa {
 
@@ -48,7 +48,7 @@ public class Empregado extends Pessoa {
 	 */
 	@Override
 	public String toString() {
-		return super.toString() +  "Salário = " + salario + ", Matricula = " + matricula + "}";
+		return super.toString() +  " Salário = " + salario + ", Matricula = " + matricula + "}";
 	}
 	
 	

@@ -1,4 +1,4 @@
-package br.cesed.facisa.poo.lista2.entidades2;
+package br.cesed.facisa.poo.lista2.entidadesquestao2;
 
 public final class Cliente extends Pessoa {
 
@@ -56,7 +56,7 @@ public final class Cliente extends Pessoa {
 	 */
 	@Override
 	public String toString() {
-		return super.toString() + " Valor da dívida = " + valorDivida + ", Ano de nascimento = " + anoNascimento + "}";
+		return super.toString() + ", Valor da dívida = " + valorDivida + ", Ano de nascimento = " + anoNascimento + "}";
 	}
 	
 	

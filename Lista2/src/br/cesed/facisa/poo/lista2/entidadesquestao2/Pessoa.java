@@ -1,4 +1,4 @@
-package br.cesed.facisa.poo.lista2.entidades2;
+package br.cesed.facisa.poo.lista2.entidadesquestao2;
 
 /**
  * 
