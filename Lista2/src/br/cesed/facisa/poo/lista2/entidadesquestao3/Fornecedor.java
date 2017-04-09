@@ -67,5 +67,21 @@ public class Fornecedor extends Pessoa {
 		return saldo;
 		
 		}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		String retorno = "";
+		if (valorDivida > 0 ) {
+			retorno = ", Valor do credito = " + valorCredito + ", Valor da Divida = " + valorDivida + "}";
+		}else{
+			retorno = ", Valor do credito = " + valorCredito + "}";
+		}
+		return super.toString() + retorno;
+	}
+	
+	
 	
 }

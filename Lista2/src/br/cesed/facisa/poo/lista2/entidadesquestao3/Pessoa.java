@@ -67,6 +67,16 @@ public abstract class Pessoa {
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "{Nome = " + nome + ", Endereço = " + endereco + ", Telefone = " + telefone;
+	}
+	
+	
 	
 	
 	
