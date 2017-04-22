@@ -41,7 +41,7 @@ public class ArrayListFacisa {
 		if (elementosInseridos >= arrayInterno.length) {
 			if (obj != null) {
 				Object[] arrayMaior = new Object[arrayInterno.length * 2];
-				for (int i = 0; i < arrayInterno.length; i++) {
+				for (int i = 0; i < elementosInseridos; i++) {
 
 					arrayInterno[i] = arrayMaior[i];
 				}
@@ -63,7 +63,7 @@ public class ArrayListFacisa {
 
 		if (elementoPosicao != -1) {
 			for (int i = elementoPosicao; i < elementosInseridos; i++) {
-				arrayInterno[i] = arrayInterno[i ];
+				arrayInterno[i] = arrayInterno[i];
 			}
 		}
 		elementosInseridos--;
