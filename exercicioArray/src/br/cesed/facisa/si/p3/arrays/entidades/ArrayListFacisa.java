@@ -39,16 +39,17 @@ public class ArrayListFacisa {
 	public void add(Object obj) {
 
 		if (elementosInseridos >= arrayInterno.length) {
+			if (obj != null) {
+				Object[] arrayMaior = new Object[arrayInterno.length * 2];
+				for (int i = 0; i < arrayInterno.length; i++) {
 
-			Object[] arrayMaior = new Object[arrayInterno.length * 2];
+					arrayInterno[i] = arrayMaior[i];
+				}
+				arrayInterno = arrayMaior;
 
-			for (int i = 0; i < arrayInterno.length; i++) {
-
-				arrayInterno[i] = arrayMaior[i];
 			}
-			arrayInterno = arrayMaior;
-		}
 
+		}
 		arrayInterno[elementosInseridos++] = obj;
 	}
 
@@ -62,7 +63,7 @@ public class ArrayListFacisa {
 
 		if (elementoPosicao != -1) {
 			for (int i = elementoPosicao; i < elementosInseridos; i++) {
-				arrayInterno[i] = arrayInterno[i + 1];
+				arrayInterno[i] = arrayInterno[i ];
 			}
 		}
 		elementosInseridos--;
@@ -78,7 +79,7 @@ public class ArrayListFacisa {
 
 		Object obj = null;
 
-		if (index < arrayInterno.length) {
+		if (index < elementosInseridos) {
 			obj = arrayInterno[index];
 		}
 
@@ -95,11 +96,15 @@ public class ArrayListFacisa {
 
 		int posicionamento = -1;
 
-		if (obj != null && arrayInterno.length > 0) {
+		if (obj != null && elementosInseridos > 0) {
 
-			for (int i = 0; i < arrayInterno.length;) {
-				posicionamento = i;
-				break;
+			for (int i = 0; i < elementosInseridos;) {
+
+				if (arrayInterno[i].equals(obj)) {
+					posicionamento = i;
+					break;
+				}
+
 			}
 		}
 
