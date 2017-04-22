@@ -71,9 +71,6 @@ public class ArrayListFacisa {
 	/**
 	 * Get the object by index.
 	 * 
-	 * For example, if I pass index as 0, this method will return the persisted
-	 * value at first position of Array.
-	 * 
 	 * @param index
 	 *            index in Array
 	 */
