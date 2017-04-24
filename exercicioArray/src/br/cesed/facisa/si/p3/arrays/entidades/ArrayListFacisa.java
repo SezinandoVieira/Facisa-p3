@@ -62,11 +62,16 @@ public class ArrayListFacisa {
 		int elementoPosicao = findPosition(obj);
 
 		if (elementoPosicao != -1) {
-			for (int i = elementoPosicao; i < elementosInseridos; i++) {
-				arrayInterno[i] = arrayInterno[i];
+			if (elementosInseridos == arrayInterno.length) {
+				arrayInterno[elementoPosicao] = null;
+			} else {
+				for (int i = elementoPosicao; i < elementosInseridos; i++) {
+					arrayInterno[i] = arrayInterno[i - 1];
+				}
 			}
+			elementosInseridos--;
 		}
-		elementosInseridos--;
+		
 	}
 
 	/**
@@ -79,7 +84,7 @@ public class ArrayListFacisa {
 
 		Object obj = null;
 
-		if (index < elementosInseridos) {
+		if (index <= elementosInseridos && index >= 0) {
 			obj = arrayInterno[index];
 		}
 
