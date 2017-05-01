@@ -38,7 +38,7 @@ public class ArrayListFacisa {
 	 */
 	public void add(Object obj) {
 
-		if (elementosInseridos >= arrayInterno.length) {
+		if (elementosInseridos == arrayInterno.length) {
 			if (obj != null) {
 				Object[] arrayMaior = new Object[arrayInterno.length * 2];
 				for (int i = 0; i < elementosInseridos; i++) {

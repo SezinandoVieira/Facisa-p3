@@ -22,7 +22,10 @@ public class Pilha {
 	}
 
 	/**
-	 * Responsible method for remove the top element
+	 * 
+	 * 
+	 * Responsible method for remove the top element and return it
+	 * 
 	 * 
 	 */
 	public Object pop() {
@@ -33,6 +36,8 @@ public class Pilha {
 	/**
 	 * 
 	 * Responsible method to insert one element in the top
+	 * 
+	 * @param obj
 	 * 
 	 */
 
@@ -52,7 +57,8 @@ public class Pilha {
 
 	/**
 	 * 
-	 * Responsible method to consult the top element
+	 * @return the top element
+	 * 
 	 */
 	public Object top() {
 		return pilhaInterna[pos - 1];
