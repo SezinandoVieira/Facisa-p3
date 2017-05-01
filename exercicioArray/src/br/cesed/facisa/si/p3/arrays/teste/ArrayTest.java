@@ -39,20 +39,45 @@ public class ArrayTest {
 		Assert.assertEquals(4, lista1.size());
 
 	}
-	
+
 	@Test
 	public void testRemove() {
 		ArrayListFacisa lista1 = new ArrayListFacisa(3);
-		
+
 		lista1.add("carlos");
-		
+
 		Assert.assertEquals(1, lista1.size());
-		
+
 		lista1.remove(0);
-		
+
 		Assert.assertEquals(0, lista1.size());
-		
-		
+
 	}
+
+	@Test
+	public void testFindPosition() {
+		ArrayListFacisa lista = new ArrayListFacisa(3);
+
+		lista.add("fernando");
+
+		Assert.assertEquals(0, lista.findPosition("fernando"));
+
+		lista.add("antonio");
+
+		Assert.assertEquals(1, lista.findPosition("antonio"));
+
+	}
+	
+	@Test
+	public void testPrintAllElements(){
+		
+		ArrayListFacisa lista = new ArrayListFacisa(3);
+		
+		lista.add("pedro");
+		lista.add("jão");
+		
+	
+	}
+
 
 }
