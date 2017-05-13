@@ -8,12 +8,6 @@ public class PilhaEncadeada {
 
 	private int inseridos;
 
-	public PilhaEncadeada(Conta inicio, int inseridos) {
-		super();
-		this.inicio = inicio;
-		this.inseridos = inseridos;
-	}
-
 	public Conta top() {
 		return inicio;
 	}
