@@ -1,14 +1,61 @@
 package br.cesed.unifacisa.si.p3.linkeddeque.test;
 
-import static org.junit.Assert.*;
-
 import org.junit.Test;
+import org.junit.Assert;
+
+import br.cesed.unifacisa.si.p3.entidades.Conta;
+import br.cesed.unifacisa.si.p3.linkeddeque.entidades.LinkedDeque;
 
 public class LinkedDequeTest {
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void addTest() {
+		Conta c1 = new Conta("Carlota", 123);
+		Conta c2 = new Conta("Antonieta", 124);
+		Conta c3 = new Conta("Valdez", 125);
+
+		LinkedDeque porto = new LinkedDeque();
+
+		porto.addFirst(c1);
+		porto.addFirst(c2);
+
+		Assert.assertEquals(2, porto.size());
+
+		Assert.assertTrue(!porto.isEmpty());
+
+		porto.addLast(c3);
+
+		Assert.assertEquals(3, porto.size());
+
 	}
+
+	@Test
+	public void removeTest() {
+		Conta c1 = new Conta("Carlota", 123);
+		Conta c2 = new Conta("Antonieta", 124);
+		Conta c3 = new Conta("Valdez", 125);
+
+		LinkedDeque porto = new LinkedDeque();
+
+		porto.addFirst(c1);
+		porto.addFirst(c2);
+		porto.addFirst(c3);
+
+		porto.removeFirst();
+
+		Assert.assertEquals(2, porto.size());
+
+		porto.removeLast();
+
+		Assert.assertEquals(1, porto.size());
+		Assert.assertTrue(!porto.isEmpty());
+
+		porto.removeFirst();
+
+		Assert.assertTrue(porto.isEmpty());
+
+	}
+	
+	
 
 }
