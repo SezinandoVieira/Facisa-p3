@@ -58,20 +58,44 @@ public class ArrayListFacisa {
 	 * 
 	 * @param obj
 	 */
-	public void remove(Object obj) {
+	public void removeByObject(Object obj) {
 		int elementoPosicao = findPosition(obj);
 
 		if (elementoPosicao != -1) {
-			if (elementosInseridos == arrayInterno.length) {
+			if (elementosInseridos > arrayInterno.length) {
 				arrayInterno[elementoPosicao] = null;
 			} else {
+				int j = 0;
 				for (int i = elementoPosicao; i < elementosInseridos; i++) {
-					arrayInterno[i] = arrayInterno[i - 1];
+					if (obj != null) {
+						arrayInterno[i] = arrayInterno[j];
+						j++;
+					}
+
 				}
 			}
 			elementosInseridos--;
 		}
-		
+
+	}
+
+	public void removeByIndex(int index) {
+		if (elementosInseridos > arrayInterno.length) {
+			arrayInterno[index] = null;
+			int j = 0;
+			Object[] nArray = new Object[arrayInterno.length - 1];
+			for (int i = 0; i < arrayInterno.length; i++) {
+				if (arrayInterno[i] != null) {
+					nArray[j] = arrayInterno[i];
+					j++;
+
+				}
+			}
+			arrayInterno = nArray;
+
+		}
+		elementosInseridos--;
+
 	}
 
 	/**
@@ -99,18 +123,16 @@ public class ArrayListFacisa {
 	 */
 	public int findPosition(Object obj) {
 
-		int posicionamento = -1;
+		int posicionamento = -5;
 
-		if (obj != null && elementosInseridos > 0) {
+		for (int i = 0; i < elementosInseridos; i++) {
 
-			for (int i = 0; i < elementosInseridos;) {
+			if (arrayInterno[i].equals(obj)) {
+				posicionamento = i;
 
-				if (arrayInterno[i].equals(obj)) {
-					posicionamento = i;
-					break;
-				}
-
+				break;
 			}
+
 		}
 
 		return posicionamento;

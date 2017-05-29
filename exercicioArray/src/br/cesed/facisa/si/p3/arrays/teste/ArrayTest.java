@@ -44,13 +44,14 @@ public class ArrayTest {
 	public void testRemove() {
 		ArrayListFacisa lista1 = new ArrayListFacisa(3);
 
-		lista1.add("carlos");
-
+		lista1.add("nome");
+		lista1.add("nome 2");
+		
+		Assert.assertEquals(2, lista1.size());
+		
+		lista1.removeByObject("nome");
+		
 		Assert.assertEquals(1, lista1.size());
-
-		lista1.remove(0);
-
-		Assert.assertEquals(0, lista1.size());
 
 	}
 
@@ -66,17 +67,6 @@ public class ArrayTest {
 
 		Assert.assertEquals(1, lista.findPosition("antonio"));
 
-	}
-	
-	@Test
-	public void testPrintAllElements(){
-		
-		ArrayListFacisa lista = new ArrayListFacisa(3);
-		
-		lista.add("pedro");
-		lista.add("jão");
-		
-	
 	}
 
 

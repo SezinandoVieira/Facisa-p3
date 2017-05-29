@@ -49,12 +49,17 @@ public class Deque {
 	public void removeFirst(Object obj) {
 
 		if (!(elementosInseridos == 0)) {
-			dequeInterno[elementosInseridos -1] = null;
+			dequeInterno[elementosInseridos - 1] = null;
 			--elementosInseridos;
 			for (int i = 0; i < elementosInseridos; i++) {
-				dequeInterno[i] = dequeInterno[i+1];
+				dequeInterno[i] = dequeInterno[i + 1];
 			}
 		}
+	}
+
+	public void removeLast() {
+
+		dequeInterno[dequeInterno.length - 1] = null;
 	}
 
 }

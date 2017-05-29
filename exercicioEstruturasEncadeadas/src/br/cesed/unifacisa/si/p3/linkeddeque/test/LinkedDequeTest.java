@@ -1,3 +1,11 @@
+/**
+ * @author Sezinando Vieira
+ * 
+ * This Junit test case is used to test the methods of LinkedDeque Class
+ * 
+ * @see LinkedDeque.java
+ */
+
 package br.cesed.unifacisa.si.p3.linkeddeque.test;
 
 import org.junit.Test;
