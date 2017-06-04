@@ -1,9 +1,9 @@
 package br.cesed.facisa.si.p3.pilha;
 /**
  * 
- * @author Sezinando
+ * Class for my own implementation of stack in a sequential way
  * 
- * Class for my own implementation of stack
+ * @author Sezinando
  *
  */
 public class Pilha {
