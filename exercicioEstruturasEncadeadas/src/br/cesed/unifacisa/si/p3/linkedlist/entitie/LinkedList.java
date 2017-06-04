@@ -2,28 +2,31 @@ package br.cesed.unifacisa.si.p3.linkedlist.entitie;
 
 import br.cesed.unifacisa.si.p3.entidades.Conta;
 
-public class LinkedList {
+/**
+ * This class is my own implementation of data structure that is List in a linked way. 
+ * 
+ * Here i defined two variables. The first one is inicio of type Conta, 
+ * it's serves to define which elements is the beginning of the List. The second one is
+ * to map how many elements are inserted on the List.
+ * 
+ * @see Conta
+ * @author Sezinando Vieira
+ *
+ */
 
-	/*
-	 * 
-	 * 
-	 * 
-	 * 
-	 * Adiciona e remove pelo objeto;
-	 * 
-	 * Retorna o tamanho da lista;
-	 * 
-	 * Retorna se a lista está vazia;
-	 * 
-	 * Obter a posição de um elemento;
-	 * 
-	 * Obter um elemento por sua posição;
-	 * 
-	 */
+public class LinkedList {
 
 	private int inseridos;
 
 	private Conta inicio;
+	
+	/**
+	 * This method adds a object by the index that is defined by the user
+	 *  
+	 * @param <b>c<b> assume a object of type Conta
+	 * 
+	 * @param <b>index<b> assume the index value
+	 */
 
 	public void addIndex(Conta c, int index) {
 		if (inicio == null) {
@@ -39,6 +42,11 @@ public class LinkedList {
 		}
 		inseridos++;
 	}
+	/**
+	 * Removes an element from his index
+	 * 
+	 * @param index
+	 */
 
 	public void removeByIndex(int index) {
 
@@ -53,15 +61,28 @@ public class LinkedList {
 		inseridos--;
 
 	}
+	/**
+	 * 
+	 * @return the size of the list
+	 */
 
 	public int size() {
 		return inseridos;
 	}
+	
+	/**
+	 * @return if the list is empty
+	 */
 
 	public boolean isEmpty() {
 		return inseridos == 0;
 	}
 
+	/**
+	 * Here I'm adding an object by his value
+	 *
+	 * @param c
+	 */
 	public void add(Conta c) {
 
 		if (inicio == null) {
@@ -72,8 +93,8 @@ public class LinkedList {
 			inicio = c;
 
 		}
-		
-		inseridos ++;
+
+		inseridos++;
 
 	}
 

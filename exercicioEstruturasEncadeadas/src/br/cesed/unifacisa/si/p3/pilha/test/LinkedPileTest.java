@@ -2,13 +2,23 @@
 package br.cesed.unifacisa.si.p3.pilha.test;
 
 import org.junit.Test;
+
 import org.junit.Assert;
 
 import br.cesed.unifacisa.si.p3.entidades.Conta;
 import br.cesed.unifacisa.si.p3.pilha.entidade.PilhaEncadeada;
 
+/**
+ * 
+ * This is my Junit test case, that i a made to check the methods of the LinkedPile are workin well
+ * 
+ * @author Sezinando Vieira
+ */
 public class LinkedPileTest {
 
+	/**
+	 * Testing if the elements that i created, are being inserted int the top of the stack
+	 */
 	@Test
 	public void testPush(){
 
@@ -25,6 +35,9 @@ public class LinkedPileTest {
 
 	}
 
+	/**
+	 * In this method, I verify if the top element that i defined are correct 
+	 */
 	@Test
 	public void testTop() {
 		Conta c1 = new Conta("carlota", 123);
@@ -49,6 +62,9 @@ public class LinkedPileTest {
 		Assert.assertEquals(c1, duracell.top());
 
 	}
+	/**
+	 * Testing the method that removes the top element of the stack
+	 */
 	
 	@Test
 	public void TesPop(){
