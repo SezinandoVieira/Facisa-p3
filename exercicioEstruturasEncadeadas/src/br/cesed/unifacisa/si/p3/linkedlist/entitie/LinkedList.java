@@ -3,11 +3,12 @@ package br.cesed.unifacisa.si.p3.linkedlist.entitie;
 import br.cesed.unifacisa.si.p3.entidades.Conta;
 
 /**
- * This class is my own implementation of data structure that is List in a linked way. 
+ * This class is my own implementation of data structure that is List in a
+ * linked way.
  * 
- * Here i defined two variables. The first one is inicio of type Conta, 
- * it's serves to define which elements is the beginning of the List. The second one is
- * to map how many elements are inserted on the List.
+ * Here i defined two variables. The first one is inicio of type Conta, it's
+ * serves to define which elements is the beginning of the List. The second one
+ * is to map how many elements are inserted on the List.
  * 
  * @see Conta
  * @author Sezinando Vieira
@@ -19,13 +20,15 @@ public class LinkedList {
 	private int inseridos;
 
 	private Conta inicio;
-	
+
 	/**
 	 * This method adds a object by the index that is defined by the user
-	 *  
-	 * @param <b>c<b> assume a object of type Conta
 	 * 
-	 * @param <b>index<b> assume the index value
+	 * @param <b>c<b>
+	 *            assume a object of type Conta
+	 * 
+	 * @param <b>index<b>
+	 *            assume the index value
 	 */
 
 	public void addIndex(Conta c, int index) {
@@ -42,6 +45,7 @@ public class LinkedList {
 		}
 		inseridos++;
 	}
+
 	/**
 	 * Removes an element from his index
 	 * 
@@ -52,7 +56,7 @@ public class LinkedList {
 
 		if (index < inseridos) {
 			Conta temp = inicio;
-			for (int i = 0; i < index - 1; i++) {
+			for (int i = 1; i < index - 1; i++) {
 				temp = temp.getNextConta();
 			}
 
@@ -61,6 +65,7 @@ public class LinkedList {
 		inseridos--;
 
 	}
+
 	/**
 	 * 
 	 * @return the size of the list
@@ -69,7 +74,7 @@ public class LinkedList {
 	public int size() {
 		return inseridos;
 	}
-	
+
 	/**
 	 * @return if the list is empty
 	 */
@@ -95,6 +100,46 @@ public class LinkedList {
 		}
 
 		inseridos++;
+
+	}
+	
+	/**
+	 * With this method, I add an object in the final of the list
+	 * 
+	 * @param c an object of type Conta
+	 */
+
+	public void addLast(Conta c) {
+		if (inicio == null) {
+			c = inicio;
+		} else {
+			Conta temp = inicio;
+
+			while (temp.getNextConta() != null) {
+				temp = temp.getNextConta();
+			}
+			temp.setNextConta(c);
+		}
+		inseridos++;
+	}
+	
+	/**
+	 * This method removes an object by his value
+	 * 
+	 * @param c an object of type Conta
+	 */
+
+	public void removeByValue(Conta c) {
+		Conta temp = inicio;
+
+		while (c != temp) {
+			if (temp.getNextConta() == c) {
+				temp.setNextConta(c.getNextConta());
+				break;
+			}
+			temp = temp.getNextConta();
+
+		}
 
 	}
 

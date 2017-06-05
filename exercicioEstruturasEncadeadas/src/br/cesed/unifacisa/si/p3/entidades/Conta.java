@@ -3,6 +3,8 @@ package br.cesed.unifacisa.si.p3.entidades;
 public class Conta {
 
 	private String nome;
+	
+	private int conta;
 
 	protected Conta nextConta;
 
@@ -25,6 +27,14 @@ public class Conta {
 
 	public void setNextConta(Conta nextConta) {
 		this.nextConta = nextConta;
+	}
+
+	public int getConta() {
+		return conta;
+	}
+
+	public void setConta(int conta) {
+		this.conta = conta;
 	}
 
 }
