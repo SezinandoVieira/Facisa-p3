@@ -33,7 +33,7 @@ public class LinkedList {
 
 	public void addIndex(Conta c, int index) {
 		if (inicio == null) {
-			c = inicio;
+			inicio = c;
 		} else if (index < inseridos && c != null) {
 			Conta ct = inicio;
 			for (int i = 1; i < index - 1; i++) {
@@ -56,11 +56,15 @@ public class LinkedList {
 
 		if (index < inseridos) {
 			Conta temp = inicio;
-			for (int i = 1; i < index - 1; i++) {
+			for (int i = 0; i < index - 1; i++) {
 				temp = temp.getNextConta();
 			}
+			if(temp.getNextConta()==null){
+				temp.setNextConta(null);
+			}else{
+				temp.setNextConta(temp.getNextConta().getNextConta());
+			}
 
-			temp.setNextConta(temp.getNextConta().getNextConta());
 		}
 		inseridos--;
 
@@ -102,11 +106,12 @@ public class LinkedList {
 		inseridos++;
 
 	}
-	
+
 	/**
 	 * With this method, I add an object in the final of the list
 	 * 
-	 * @param c an object of type Conta
+	 * @param c
+	 *            an object of type Conta
 	 */
 
 	public void addLast(Conta c) {
@@ -122,11 +127,12 @@ public class LinkedList {
 		}
 		inseridos++;
 	}
-	
+
 	/**
 	 * This method removes an object by his value
 	 * 
-	 * @param c an object of type Conta
+	 * @param c
+	 *            an object of type Conta
 	 */
 
 	public void removeByValue(Conta c) {
